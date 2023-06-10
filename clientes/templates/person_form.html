@@ -1,7 +1,14 @@
- <h3>Novo cliente</h3>
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+
+{% block title %} Administracao {% endblock %}
+
+{% block main %}
+<h3>Novo cliente</h3>
     <form method="POST" enctype="multipart/form-data">
         {% csrf_token %}
          {{ form }}
         <button type="submit" class="btn btn-primary">Salvar</button>
     </form>
+{% endblock %}
 
